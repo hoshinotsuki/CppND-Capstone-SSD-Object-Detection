@@ -26,9 +26,9 @@ class SSDModel
     float nms_threshold;
 
     // SSD MobileNet Model files 
-    const std::string class_file = "../model/object_detection_classes_coco.txt";
-    const std::string model_file = "../model/frozen_inference_graph.pb";
-    const std::string config_file = "../model/ssd_mobilenet_v2_coco_2018_03_29.pbtxt";;
+    const std::string class_file = "../models/object_detection_classes_coco.txt";
+    const std::string model_file = "../models/frozen_inference_graph.pb";
+    const std::string config_file = "../models/ssd_mobilenet_v2_coco_2018_03_29.pbtxt";;
 
     // Parameters for SSD MobileNet (fixed)
     const float scale = 1.f;

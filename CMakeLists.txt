@@ -17,6 +17,6 @@ add_definitions(${OpenCV_DEFINITIONS})
 file(GLOB project_SRCS src/*.cpp) #src/*.h
 
 # Add project executable
-add_executable(ssd_obj_detect ${project_SRCS})
-target_link_libraries(ssd_obj_detect ${OpenCV_LIBRARIES})
+add_executable(detect ${project_SRCS})
+target_link_libraries(detect ${OpenCV_LIBRARIES})
 

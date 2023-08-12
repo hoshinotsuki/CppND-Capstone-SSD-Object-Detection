@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ssd_obj_detect
+# Target rules for targets named detect
 
 # Build rule for target.
-ssd_obj_detect: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ssd_obj_detect
-.PHONY : ssd_obj_detect
+detect: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 detect
+.PHONY : detect
 
 # fast build rule for target.
-ssd_obj_detect/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_obj_detect.dir/build.make CMakeFiles/ssd_obj_detect.dir/build
-.PHONY : ssd_obj_detect/fast
+detect/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/build
+.PHONY : detect/fast
 
 src/Graphic.o: src/Graphic.cpp.o
 .PHONY : src/Graphic.o
 
 # target to build an object file
 src/Graphic.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_obj_detect.dir/build.make CMakeFiles/ssd_obj_detect.dir/src/Graphic.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/src/Graphic.cpp.o
 .PHONY : src/Graphic.cpp.o
 
 src/Graphic.i: src/Graphic.cpp.i
@@ -142,7 +142,7 @@ src/Graphic.i: src/Graphic.cpp.i
 
 # target to preprocess a source file
 src/Graphic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_obj_detect.dir/build.make CMakeFiles/ssd_obj_detect.dir/src/Graphic.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/src/Graphic.cpp.i
 .PHONY : src/Graphic.cpp.i
 
 src/Graphic.s: src/Graphic.cpp.s
@@ -150,7 +150,7 @@ src/Graphic.s: src/Graphic.cpp.s
 
 # target to generate assembly for a file
 src/Graphic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_obj_detect.dir/build.make CMakeFiles/ssd_obj_detect.dir/src/Graphic.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/src/Graphic.cpp.s
 .PHONY : src/Graphic.cpp.s
 
 src/SSDModel.o: src/SSDModel.cpp.o
@@ -158,7 +158,7 @@ src/SSDModel.o: src/SSDModel.cpp.o
 
 # target to build an object file
 src/SSDModel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_obj_detect.dir/build.make CMakeFiles/ssd_obj_detect.dir/src/SSDModel.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/src/SSDModel.cpp.o
 .PHONY : src/SSDModel.cpp.o
 
 src/SSDModel.i: src/SSDModel.cpp.i
@@ -166,7 +166,7 @@ src/SSDModel.i: src/SSDModel.cpp.i
 
 # target to preprocess a source file
 src/SSDModel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_obj_detect.dir/build.make CMakeFiles/ssd_obj_detect.dir/src/SSDModel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/src/SSDModel.cpp.i
 .PHONY : src/SSDModel.cpp.i
 
 src/SSDModel.s: src/SSDModel.cpp.s
@@ -174,7 +174,7 @@ src/SSDModel.s: src/SSDModel.cpp.s
 
 # target to generate assembly for a file
 src/SSDModel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_obj_detect.dir/build.make CMakeFiles/ssd_obj_detect.dir/src/SSDModel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/src/SSDModel.cpp.s
 .PHONY : src/SSDModel.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -182,7 +182,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_obj_detect.dir/build.make CMakeFiles/ssd_obj_detect.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -190,7 +190,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_obj_detect.dir/build.make CMakeFiles/ssd_obj_detect.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -198,7 +198,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ssd_obj_detect.dir/build.make CMakeFiles/ssd_obj_detect.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -209,7 +209,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ssd_obj_detect"
+	@echo "... detect"
 	@echo "... src/Graphic.o"
 	@echo "... src/Graphic.i"
 	@echo "... src/Graphic.s"

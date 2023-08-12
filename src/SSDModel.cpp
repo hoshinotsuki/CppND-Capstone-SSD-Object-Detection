@@ -173,8 +173,7 @@ void SSDModel::readClassFile()
     {
         classes.push_back(line);
     }
-}
-
+} 
 // Load DNN model and store it to the private attribute.
 void SSDModel::loadModel()
 {
