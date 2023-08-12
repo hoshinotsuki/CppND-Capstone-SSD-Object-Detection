@@ -28,12 +28,12 @@ In the root directory (this repository), execute the command below:
 
 1. `mkdir models`
 
-2.  download the model weights
+2.  download the model file 
 
     `wget https://github.com/rdeepc/ExploreOpencvDnn/raw/master/models/frozen_inference_graph.pb -O models/frozen_inference_graph.pb`
 
 
-3. download the model architecture
+3. download the config file
 
     `wget https://github.com/rdeepc/ExploreOpencvDnn/raw/master/models/ssd_mobilenet_v2_coco_2018_03_29.pbtxt -O models/ssd_mobilenet_v2_coco_2018_03_29.pbtxt`
 
