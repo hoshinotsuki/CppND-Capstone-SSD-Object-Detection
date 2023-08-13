@@ -69,9 +69,10 @@ In `build` directory, run the executable like below:
 
 
 ## Output
+[demo](https://drive.google.com/file/d/1XUSKXu-G87XQyCqey40H_eJu593En7O-/view?usp=sharing)
 
 <video controls width="500">
-  <source src="output/demo.mp4" type="video/mp4"> 
+  <source src="output/faster.mp4" type="video/mp4"> 
 </video>
 
 
