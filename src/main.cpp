@@ -99,25 +99,25 @@ int main(int argc, char** argv)
 
     while(cv::waitKey(duration) < 0) 
     {
-
         if(image_queue->getTotal() > 0 && count >= image_queue->getTotal()) 
             break; 
 
+        // receive image from the thread of reading
         current_image = image_queue->receive();
   
         // object detection at a certain frequency 
         if(count%(input.getDetectFreq()) == 0) 
             ssd_model.getNextDetection(classIds, classNames, confidences, boxes); 
 
-        // draws bounding boxes and labels 
         input.drawResult(current_image, classIds, classNames, confidences, boxes);
 
-        // displayed in the OpenCV window 
         cv::imshow(window_name, current_image);
 
         ++count;
     }
     std::cout << " --- Object detection finished. Press Enter key to quit.---\n";
+
+    // keep the display window open after the loop finishes.
     cv::waitKey(0);
    
     return 0;

@@ -75,15 +75,19 @@ In `build` directory, run the executable like below:
 
     CMake configuration file sets up the project with the necessary compiler flags, finds and includes the OpenCV library, defines the source files, and links the executable with the required libraries, ensuring that dependencies are correctly linked and the correct compiler flags are used.
 
-2. `Graphic.h` and `Graphic.cpp`
+2. `MessageQueue.h`
+
+    Class MessageQueue is designed to manage a queue of messages that can be sent and received concurrently by different threads, using mutexes and condition variables to ensure proper synchronization and thread safety. 
+
+3. `Graphic.h` and `Graphic.cpp`
 
     Class Graphic is used for handling images, drawing object detection results on images, and managing communication with message queues.  
 
-3. `SSDModel.h` and `SSDModel.cpp`
+4. `SSDModel.h` and `SSDModel.cpp`
 
     Class SSDModel 
 
-4. `MessageQueue.h`
+
 
 
 5. `main.cpp`
