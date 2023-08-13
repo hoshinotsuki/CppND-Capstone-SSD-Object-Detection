@@ -57,8 +57,8 @@ void SSDModel::getNextDetection(std::vector<int> &classIds,
     queue_boxes.pop();
 }
 
-// Return the number of classes
-int SSDModel::getClassNumber()
+// Return the size of classes
+int SSDModel::getClassSize()
 {
     return classes.size();
 }

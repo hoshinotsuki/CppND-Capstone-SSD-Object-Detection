@@ -60,7 +60,7 @@ int main(int argc, char** argv)
 
     const std::string window_name= "Object Detection";
     cv::namedWindow(window_name, cv::WINDOW_NORMAL);
-
+    
     // Create queues for sending image to display and to detection
     std::shared_ptr<MessageQueue<cv::Mat>> image_queue(new MessageQueue<cv::Mat>);
     std::shared_ptr<MessageQueue<cv::Mat>> detection_queue(new MessageQueue<cv::Mat>);
@@ -69,7 +69,7 @@ int main(int argc, char** argv)
     SSDModel ssd_model = SSDModel(conf_threshold, nms_threshold);
 
     // Create Graphic model which handles images 
-    Graphic input = Graphic(img_file, ssd_model.getClassNumber());
+    Graphic input = Graphic(img_file, ssd_model.getClassSize());
 
     // Set shared pointers of queues into objects
     input.setImageQueue(image_queue);
@@ -89,34 +89,36 @@ int main(int argc, char** argv)
     std::vector<cv::Rect> boxes;
     cv::Mat current_image;
 
+    // waittime of processing the next iteration
     const int duration = (int)(1000/input.getFps());
+
+    // the number of iteration processed within the loop 
     int count = 0;
+
     std::this_thread::sleep_for(std::chrono::seconds(1));
 
-    while(cv::waitKey(duration) < 0)
+    while(cv::waitKey(duration) < 0) 
     {
 
-        if(image_queue->getTotal() > 0 && count >= image_queue->getTotal())
-        {
-            break;
-        }
+        if(image_queue->getTotal() > 0 && count >= image_queue->getTotal()) 
+            break; 
 
-        //std::this_thread::sleep_for(std::chrono::milliseconds(1));
         current_image = image_queue->receive();
- 
-        // Execute the detection once per counts specified by getDetectFreq()
-        if(count%(input.getDetectFreq()) == 0)
-        {   
-            ssd_model.getNextDetection(classIds, classNames, confidences, boxes);
-        }
+  
+        // object detection at a certain frequency 
+        if(count%(input.getDetectFreq()) == 0) 
+            ssd_model.getNextDetection(classIds, classNames, confidences, boxes); 
 
-        // Plot the result and show the image on window
+        // draws bounding boxes and labels 
         input.drawResult(current_image, classIds, classNames, confidences, boxes);
+
+        // displayed in the OpenCV window 
         cv::imshow(window_name, current_image);
 
         ++count;
     }
     std::cout << " --- Object detection finished. Press Enter key to quit.---\n";
     cv::waitKey(0);
+   
     return 0;
 }

@@ -67,13 +67,27 @@ In `build` directory, run the executable like below:
 
 `./detect -c=0.2 ../images/apple1_0.2.mp4`
 
+`./detect -c=0.7 -n=0.4 ../images/orange_0.7.mp4`
+
 ## Content
 
 1. `CMakeLists.txt`
 
     CMake configuration file sets up the project with the necessary compiler flags, finds and includes the OpenCV library, defines the source files, and links the executable with the required libraries, ensuring that dependencies are correctly linked and the correct compiler flags are used.
 
-2. 
+2. `Graphic.h` and `Graphic.cpp`
+
+    Class Graphic is used for handling images, drawing object detection results on images, and managing communication with message queues.  
+
+3. `SSDModel.h` and `SSDModel.cpp`
+
+    Class SSDModel 
+
+4. `MessageQueue.h`
+
+
+5. `main.cpp`
+
 
 ## Program Schematic
 

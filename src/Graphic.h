@@ -4,7 +4,7 @@
 #include "SSDModel.h"
 #include "MessageQueue.h"
 
-
+// image to be detected (input)
 class Graphic
 {
   public:
