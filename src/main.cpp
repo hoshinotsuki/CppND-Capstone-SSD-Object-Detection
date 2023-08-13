@@ -1,13 +1,7 @@
 //
 // SDD object detection using OpenCV
 //   - Using SSD MobileNet v2 COCO data with TensorFlow
-//
-// configration file (.pbtxt) downloaded from below:
-// https://github.com/opencv/opencv_extra/tree/master/testdata/dnn
-//
-// SDD MobileNet model file (.pb) downloaded from below:
-// https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
-//
+// 
 // Sample source:
 // https://github.com/opencv/opencv/blob/master/samples/dnn/object_detection.cpp
 //
@@ -21,7 +15,6 @@
 #include <opencv2/dnn.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
-
 #include <opencv2/core/utils/filesystem.hpp>
 
 #if CV_VERSION_MAJOR < 4

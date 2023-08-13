@@ -18,7 +18,6 @@ Capstone for Udacity Nanodegree in C++
   - Linux: gcc / g++ is installed by default on most Linux distros
   - Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
   - Windows: recommend using [MinGW](http://www.mingw.org/)
-- **GPU** is recommended
 
 ## Download models (Optional)
 
@@ -45,20 +44,18 @@ In the root directory (this repository), execute the command below:
 
 In the root directory (this repository), execute the command below:
 
-1. `mkdir build`
-2. `cd build`
-3. `cmake ..`
-4. `make`
-
-The executable(`detect`) is created in the current directory(`build`).
+1. `rm -rf build` (optional)
+2. `mkdir build`
+3. `cd build`
+4. `cmake ..`
+5. `make`
 
 ## Run
 
 In `build` directory, run the executable like below:
 
 `./detect [options] <image file>`
-
-This reads an image file and show the result of object detection. `<image file>` should be a path to the file you want to input.
+ 
 
 #### Options
 
@@ -69,3 +66,14 @@ This reads an image file and show the result of object detection. `<image file>`
 #### Example
 
 `./detect -c=0.2 ../images/apple1_0.2.mp4`
+
+## Content
+
+1. `CMakeLists.txt`
+
+    CMake configuration file sets up the project with the necessary compiler flags, finds and includes the OpenCV library, defines the source files, and links the executable with the required libraries, ensuring that dependencies are correctly linked and the correct compiler flags are used.
+
+2. 
+
+## Program Schematic
+
