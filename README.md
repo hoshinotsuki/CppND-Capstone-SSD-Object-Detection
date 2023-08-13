@@ -4,24 +4,16 @@ Capstone for Udacity Nanodegree in C++
 
 ## Requirements
 
-- **OpenCV >= 4**
-  - [Install instruction for Linux](https://docs.opencv.org/4.1.1/d7/d9f/tutorial_linux_install.html)
-  - [Install istruction for Windows](https://www.learnopencv.com/install-opencv-4-on-windows/)
-  - [Install instruction for Mac](https://www.learnopencv.com/install-opencv-4-on-macos/)
-- cmake >= 3.7
-  - All OSes: [click here for installation instructions](https://cmake.org/install/)
-- make >= 4.1 (Linux, Mac), 3.81 (Windows)
-  - Linux: make is installed by default on most Linux distros
-  - Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)
-  - Windows: [Click here for installation instructions](http://gnuwin32.sourceforge.net/packages/make.htm)
-- gcc/g++ >= 5.4
-  - Linux: gcc / g++ is installed by default on most Linux distros
-  - Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
-  - Windows: recommend using [MinGW](http://www.mingw.org/)
+- OpenCV >= 4
+- cmake >= 3.7 
+- make >= 4.1 (Linux, Mac), 3.81 (Windows) 
+- gcc/g++ >= 5.4 
 
 ## Download models (Optional)
 
-In this example I use MobileNet SSD from tensorflow to be implemented in opencv. Models were already downloaded in this project. Here shows how to download those models if needed.
+In this example I used MobileNet SSD from TensorFlow to be implemented in OpenCV. 
+Models were already downloaded in this project. 
+Here shows how to download those models if needed.
 
 In the root directory (this repository), execute the command below:
 
@@ -65,9 +57,23 @@ In `build` directory, run the executable like below:
 
 #### Example
 
-`./detect -c=0.2 ../images/apple1_0.2.mp4`
+`./detect -c=0.6 ../images/apple.mp4`
 
-`./detect -c=0.7 -n=0.4 ../images/orange_0.7.mp4`
+`./detect -c=0.2 -n=0.5 ../images/harvesting.mp4`
+
+`./detect -c=0.7 -n=0.4 ../images/orange.mp4`
+
+`./detect -c=0.5 ../images/pplfollowing.mp4`
+
+`./detect -c=0.8 ../images/collision_avoidance.mp4`
+
+
+## Output
+
+<video controls width="500">
+  <source src="output/demo.mp4" type="video/mp4"> 
+</video>
+
 
 ## Content
 
@@ -81,7 +87,7 @@ In `build` directory, run the executable like below:
 
 3. `Graphic.h` and `Graphic.cpp`
 
-    Class Graphic is used for handling images, drawing object detection results on images, and managing communication with message queues.  
+    Class Graphic is responsible for handling images, drawing object detection results on images, and managing message queues for communication.  
 
 4. `SSDModel.h` and `SSDModel.cpp`
 
