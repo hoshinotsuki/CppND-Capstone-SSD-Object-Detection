@@ -64,9 +64,9 @@ void Graphic::drawResult(cv::Mat &image, const std::vector<int> &classIds,
     cv::Point p2 =
         cv::Point(boxes[i].x + boxes[i].width, boxes[i].y + boxes[i].height);
     CV_Assert(classIds[i] < class_color.size());
-    cv::rectangle(image, p1, p2, class_color[classIds[i]], 2);
+    cv::rectangle(image, p1, p2, class_color[classIds[i]], 5);
 
-    // send warning
+    // Send warning
     if (boxes[i].width * 1.0 / image_width > 0.5 ||
         boxes[i].height * 1.0 / image_height > 0.5)
       std::cout << "Collision Avoidance for " << classNames[i] << ": width "
@@ -80,14 +80,14 @@ void Graphic::drawResult(cv::Mat &image, const std::vector<int> &classIds,
 
     int baseLine;
     cv::Size labelSize =
-        cv::getTextSize(label, cv::FONT_HERSHEY_SIMPLEX, 1, 1, &baseLine);
+        cv::getTextSize(label, cv::FONT_HERSHEY_SIMPLEX, 5, 5, &baseLine);
 
     int top = std::max(boxes[i].y, labelSize.height);
-    cv::Point lp1 = cv::Point(boxes[i].x, top - labelSize.height - 2);
+    cv::Point lp1 = cv::Point(boxes[i].x, top - labelSize.height - 5);
     cv::Point lp2 = cv::Point(boxes[i].x + labelSize.width, top);
     cv::rectangle(image, lp1, lp2, class_color[classIds[i]], cv::FILLED);
     cv::putText(image, label, cv::Point(boxes[i].x, top - 1),
-                cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(), 1);
+                cv::FONT_HERSHEY_SIMPLEX, 5, cv::Scalar(), 5);
   }
 }
 

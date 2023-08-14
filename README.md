@@ -1,8 +1,35 @@
 # CppND-Capstone-SSD-Object-Detection
 
-Capstone for Udacity Nanodegree in C++
+[demo](https://drive.google.com/file/d/1XUSKXu-G87XQyCqey40H_eJu593En7O-/view?usp=sharing)
 
-## Requirements
+![alt collision avoidance](output/gif.gif)
+ 
+This is a Capstone project for Udacity Nanodegree in C++. 
+
+This a Object Detection with Collision Warning application used in Robotic Automation Navigation.
+
+* Object Detection using MobileNet SSD Model with OpenCV
+
+    MobileNet SSD (Single Shot MultiBox Detector) model is a deeplearning-based object detection model optimized for real-time processing. The model is capable of detecting objects in images or frames from a video stream.  
+    
+    OpenCV is a popular computer vision library that provides various tools and functions for image and video processing.
+
+* User Input and Display
+
+    The project takes input from either a video stream or an image.
+    The detected objects are highlighted with bounding boxes and labeled with their respective class names.
+    The results are displayed in a new window, allowing users to visualize the detected objects and their positions.
+
+* Collision Warning
+
+    A crucial aspect of the project is collision warning. If the detected objects are within a certain distance of the robotic system, a collision warning message is displayed on the terminal. This collision warning feature enhances the safety of robotic navigation, allowing the system to take preventive actions when potential collisions are detected.
+
+* Real-time Processing
+
+    The project involves real-time processing, where the object detection and collision warning are performed in near-real-time as the video frames or images are processed. 
+  
+
+## Dependencies  
 
 - OpenCV >= 4
 - cmake >= 3.7 
@@ -11,8 +38,7 @@ Capstone for Udacity Nanodegree in C++
 
 ## Download models (Optional)
 
-In this example I used MobileNet SSD from TensorFlow to be implemented in OpenCV. 
-Models were already downloaded in this project. 
+MobileNet SSD Models were already downloaded in this project. 
 Here shows how to download those models if needed.
 
 In the root directory (this repository), execute the command below:
@@ -57,20 +83,9 @@ In `build` directory, run the executable like below:
 
 #### Example
 
-`./detect -c=0.6 ../images/apple.mp4`
-
-`./detect -c=0.2 -n=0.5 ../images/harvesting.mp4`
-
-`./detect -c=0.7 -n=0.4 ../images/orange.mp4`
-
-`./detect -c=0.5 ../images/pplfollowing.mp4`
-
 `./detect -c=0.8 ../images/collision_avoidance.mp4`
 
-
-## Output
-[demo](https://drive.google.com/file/d/1XUSKXu-G87XQyCqey40H_eJu593En7O-/view?usp=sharing)
-![alt collision avoidance](output/gif.gif)
+`./detect -c=0.7 -n=0.4 ../images/orange.mp4`
  
 
 
@@ -86,7 +101,7 @@ In `build` directory, run the executable like below:
 
 3. `Graphic.h` and `Graphic.cpp`
 
-    Class Graphic is responsible for handling images, drawing object detection results on images, and managing message queues for communication.  
+    Class Graphic is responsible for handling images, drawing object detection results on images, sending message to the terminal for collision warning and managing message queues for communication.  
 
 4. `SSDModel.h` and `SSDModel.cpp`
 
