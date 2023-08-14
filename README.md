@@ -115,3 +115,6 @@ In `build` directory, run the executable like below:
 ## Program Schematic
 
 ![alt diagram](output/diagram.png)
+
+## Reference
+[opencv_dnn_SSD](https://github.com/opencv/opencv/blob/master/samples/dnn/object_detection.cpp)
