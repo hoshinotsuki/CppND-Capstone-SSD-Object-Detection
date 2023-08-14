@@ -105,13 +105,13 @@ In `build` directory, run the executable like below:
 
 4. `SSDModel.h` and `SSDModel.cpp`
 
-    Class SSDModel 
-
-
-
+    Class SSDModel encapsulates the entire object detection pipeline using the SSD MobileNet model. It initializes the model, processes images for object detection, and handles synchronization between threads using mutexes and condition variables.  
 
 5. `main.cpp`
+
+    This function processes images, performs object detection using an SSD model, and displays the detection results on a window. It processes images in a loop, detects objects periodically, and updates the display with the detection results.
 
 
 ## Program Schematic
 
+![alt diagram](output/diagram.png)

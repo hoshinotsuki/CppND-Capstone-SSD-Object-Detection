@@ -42,10 +42,10 @@ class SSDModel
     cv::dnn::Net net;
     // Information about detected objects
     std::shared_ptr<MessageQueue<cv::Mat>> detect_queue;
-    std::queue<std::vector<int>> queue_classIds;
-    std::queue<std::vector<std::string>> queue_classNames;
-    std::queue<std::vector<float>> queue_confs;
-    std::queue<std::vector<cv::Rect>> queue_boxes;
+    std::queue<std::vector<int>> detect_classIds;
+    std::queue<std::vector<std::string>> detect_classNames;
+    std::queue<std::vector<float>> detect_confs;
+    std::queue<std::vector<cv::Rect>> detect_boxes;
     std::mutex _mutex;
     std::condition_variable _cond;
     // thread for detection
