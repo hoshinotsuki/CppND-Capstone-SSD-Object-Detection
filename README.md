@@ -4,37 +4,34 @@
 
 ![alt collision avoidance](output/gif.gif)
  
-This is a Capstone project for Udacity Nanodegree in C++. 
+##  Description
+This is a Capstone Project (Option 1 Object detector using OpenCV) for Udacity Nanodegree in C++. 
 
-This a Object Detection with Collision Warning application used in Robotic Automation Navigation.
+This an Object Detection with Collision Warning Application used in Robotic Automation Navigation. The project takes input from either a video stream or an image. The detected objects are highlighted with bounding boxes and labeled with their respective class names.  If the detected objects are within a certain distance of the robotic system, a collision warning message is displayed on the terminal. The project involves real-time processing, where the object detection and collision warning are performed in near-real-time as the video frames or images are processed. 
 
-* Object Detection using MobileNet SSD Model with OpenCV
+## Features 
 
-    MobileNet SSD (Single Shot MultiBox Detector) model is a deeplearning-based object detection model optimized for real-time processing. The model is capable of detecting objects in images or frames from a video stream.  
-    
-    OpenCV is a popular computer vision library that provides various tools and functions for image and video processing.
-
+* Object Detection using MobileNet SSD(Single Shot MultiBox Detector) Model with OpenCV
 * User Input and Display
-
-    The project takes input from either a video stream or an image.
-    The detected objects are highlighted with bounding boxes and labeled with their respective class names.
-    The results are displayed in a new window, allowing users to visualize the detected objects and their positions.
-
-* Collision Warning
-
-    A crucial aspect of the project is collision warning. If the detected objects are within a certain distance of the robotic system, a collision warning message is displayed on the terminal. This collision warning feature enhances the safety of robotic navigation, allowing the system to take preventive actions when potential collisions are detected.
-
+* Collision Warning 
 * Real-time Processing
 
-    The project involves real-time processing, where the object detection and collision warning are performed in near-real-time as the video frames or images are processed. 
-  
-
 ## Dependencies  
-
-- OpenCV >= 4
-- cmake >= 3.7 
-- make >= 4.1 (Linux, Mac), 3.81 (Windows) 
-- gcc/g++ >= 5.4 
+ 
+- OpenCV >= 4 
+  - [Install instruction for Linux](https://docs.opencv.org/4.1.1/d7/d9f/tutorial_linux_install.html)
+  - [Install istruction for Windows](https://www.learnopencv.com/install-opencv-4-on-windows/)
+  - [Install instruction for Mac](https://www.learnopencv.com/install-opencv-4-on-macos/)
+- cmake >= 3.7
+    * All OSes: [click here for installation instructions](https://cmake.org/install/)
+- make >= 4.1 (Linux, Mac), 3.81 (Windows)
+    * Linux: make is installed by default on most Linux distros
+    * Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)
+    * Windows: [Click here for installation instructions](http://gnuwin32.sourceforge.net/packages/make.htm)
+- gcc/g++ >= 5.4
+    * Linux: gcc / g++ is installed by default on most Linux distros
+    * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
+    * Windows: recommend using [MinGW](http://www.mingw.org/)
 
 ## Download models (Optional)
 
@@ -89,27 +86,28 @@ In `build` directory, run the executable like below:
  
 
 
-## Content
+## File and Class Structure
 
 1. `CMakeLists.txt`
 
     CMake configuration file sets up the project with the necessary compiler flags, finds and includes the OpenCV library, defines the source files, and links the executable with the required libraries, ensuring that dependencies are correctly linked and the correct compiler flags are used.
 
-2. `MessageQueue.h`
+2. `main.cpp`
+
+    This function processes images, performs object detection using an SSD model, and displays the detection results on a window. It processes images in a loop, detects objects periodically, and updates the display with the detection results.
+    
+3. `MessageQueue.h`
 
     Class MessageQueue is designed to manage a queue of messages that can be sent and received concurrently by different threads, using mutexes and condition variables to ensure proper synchronization and thread safety. 
 
-3. `Graphic.h` and `Graphic.cpp`
+4. `Graphic.h` and `Graphic.cpp`
 
     Class Graphic is responsible for handling images, drawing object detection results on images, sending message to the terminal for collision warning and managing message queues for communication.  
 
-4. `SSDModel.h` and `SSDModel.cpp`
+5. `SSDModel.h` and `SSDModel.cpp`
 
     Class SSDModel encapsulates the entire object detection pipeline using the SSD MobileNet model. It initializes the model, processes images for object detection, and handles synchronization between threads using mutexes and condition variables.  
-
-5. `main.cpp`
-
-    This function processes images, performs object detection using an SSD model, and displays the detection results on a window. It processes images in a loop, detects objects periodically, and updates the display with the detection results.
+ 
 
 
 ## Program Schematic
@@ -118,3 +116,176 @@ In `build` directory, run the executable like below:
 
 ## Reference
 [opencv_dnn_SSD](https://github.com/opencv/opencv/blob/master/samples/dnn/object_detection.cpp)
+
+## Rubric Points
+
+1. README 
+
+    1.1 A README with instructions is included with the project.  
+    * Dependencies
+    * Download models (Optional)
+    * Build  
+    * Run
+
+    1.2 The README indicates which project is chosen.
+    * Description
+    * Features
+    * File and Class Structure
+
+    1.3 The README includes information about each rubric point addressed. 
+    * Rubric Points
+
+2. Compiling and Testing
+    * Build
+    * Run
+
+3. Loops, Functions, I/O
+
+    3.1 The project demonstrates an understanding of C++ functions and control structures. 
+    * Graphic.cpp line 96 : `void Graphic::readImage(); `
+    * Main.cpp line 98 - 115 : `while(cv::waitKey(duration) < 0);`
+    * SSDModel.cpp 
+
+        line 58 - 91 : `void SSDModel::objectDetection();`
+        
+        line 98 - 148 : `std::vector<int> SSDModel::detect(const cv::Mat &image,
+                                    std::vector<int> &classIds,
+                                    std::vector<float> &confidences,
+                                    std::vector<cv::Rect> &boxes);`
+
+    3.2 The project reads data from a file and process the data, or the program writes data to a file. 
+    * SSDModel.cpp 
+
+        line 150 - 160 : `void SSDModel::readClassFile();`
+        
+        line 163 - 175 : `void SSDModel::loadModel();`
+
+    3.3 The project accepts user input and processes the input. 
+    * main.cpp line 28 - 59 : `cv::CommandLineParser parser(argc, argv, keys);`
+ 
+4. Object Oriented Programming
+
+    4.1 The project uses Object Oriented Programming techniques.
+    * Graphic.h line 8 - 46 : `class Graphic `
+    * SSDModel.h line 9 - 62 : `class SSDModel`
+    * MessageQueue.h line 9 - 67 : `class MessageQueue`
+
+    4.2 Classes use appropriate access specifiers for class members.     
+    4.3 Class constructors utilize member initialization lists.
+    * Graphic.cpp line 14 - 15 : `Graphic::Graphic(std::string _img_path, int class_num) : image_path(_img_path) {...}`
+    * SSDModel.cpp line 17 - 21 : `SSDModel::SSDModel(float _conf_threshold, float _nms_threshold)
+        : conf_threshold(_conf_threshold), nms_threshold(_nms_threshold){...}`
+ 
+    4.5 Classes encapsulate behavior. 
+ 
+    * MessageQueue.h line 61 - 65 :
+        `private: std::mutex _mutex;  std::condition_variable _cond; std::deque<T> _messages; int _total = 0;`
+    * Graphic.h line 26 - 45 :
+    `private: 
+    // Information about the input video 
+    // thread for reading images 
+    // pointer for the queue to send images being read 
+    // colors being assigned to classes randomly`
+    * SSDModel.cpp line 23 - 60:
+     ` private:
+    // Detection threshold 
+    // SSD MobileNet Model files  
+    // Parameters for SSD MobileNet (fixed) 
+    // Store the list of classe name 
+    // DNN model 
+    // Information about detected objects 
+    // thread for detection  `
+
+    4.9 Templates generalize functions in the project.
+    * MessageQueue.h line 8 - 66 : `template <typename T> class MessageQueue{};`
+
+5. Memory Management
+
+    5.1 The project makes use of references in function declarations.
+
+    * Graphic.h line 13 - 17 : `void drawResult(cv::Mat &image, 
+                    const std::vector<int> &classIds,
+                    const std::vector<std::string> &classNames,
+                    const std::vector<float> &confidences,
+                    const std::vector<cv::Rect> &boxes);`
+    * SSDModel.h 
+    
+        line 18 - 21 : `void getNextDetection(std::vector<int> &classIds,
+                            std::vector<std::string> &classNames,
+                            std::vector<float> &confidences,
+                            std::vector<cv::Rect> &boxes);`
+
+        line 56 - 58 : `std::vector<int> detect(const cv::Mat &image, std::vector<int> &classIds,
+                                        std::vector<float> &confidences,
+                                        std::vector<cv::Rect> &boxes);`
+
+    5.2 The project uses destructors appropriately. 
+    * Graphic.cpp line 34 : `Graphic::~Graphic() { read_thread.join(); }`
+    * SSDModel.cpp line 23 : `SSDModel::~SSDModel() { detection_thread.join(); }` 
+ 
+    5.5 The project uses move semantics to move data, instead of copying it, where possible.
+    * Graphic.cpp 
+
+        line 120 : `detect_queue->send(std::move(frame1));`
+
+        line 123 : `image_queue->send(std::move(cv::Mat(frame)));`
+
+        line 133 : `detect_queue->send(std::move(cv::Mat()));`
+    * SSDModel.cpp
+
+        line 36 - 51 :
+    `void SSDModel::getNextDetection(std::vector<int> &classIds,
+                                std::vector<std::string> &classNames,
+                                std::vector<float> &confidences,
+                                std::vector<cv::Rect> &boxes)  {...
+  classIds = std::move(detect_classIds.front());...
+  classNames = std::move(detect_classNames.front());...
+  confidences = std::move(detect_confs.front());
+  detect_confs.pop();
+  boxes = std::move(detect_boxes.front());
+  detect_boxes.pop();`
+
+        line 83 - 86 :
+   `void SSDModel::objectDetection(){...detect_classIds.push(std::move(classIds_out));
+    detect_confs.push(std::move(confidences_out));
+    detect_boxes.push(std::move(boxes_out));
+    detect_classNames.push(std::move(classNames_out));...}`
+
+    5.6 The project uses smart pointers instead of raw pointers.
+    * Graphic.h line 37 - 38 : `std::shared_ptr<MessageQueue<cv::Mat>> detect_queue = nullptr;
+    std::shared_ptr<MessageQueue<cv::Mat>> image_queue = nullptr;` 
+
+6. Concurrency
+
+    6.1 The project uses multithreading.
+    * Graphic.cpp line 36 - 38 : `void Graphic::thread_for_read();`
+    * SSDModel.cpp line 25 - 27 : `void SSDModel::thread_for_detection();`
+
+    6.3 A mutex or lock is used in the project.
+    * MessageQueue.h 
+    
+        line 14 - 27 : `T receive() {...std::unique_lock<std::mutex> ulock(_mutex);...}`
+    
+        line 31 - 40 :
+        `void send(T &&msg)
+        {...std::lock_guard<std::mutex> ulock(_mutex);...}`
+        
+        line 48 - 54 :
+        `int getTotal() {std::lock_guard<std::mutex> ulock(_mutex);...}`
+
+        line 55 - 59 : ` void setTotal(int total) {std::lock_guard<std::mutex> ulock(_mutex);...}`
+
+    * SSDModel.cpp 
+    
+        line 41 - 42 : ` std::unique_lock<std::mutex> ulock(_mutex);
+    _cond.wait(ulock, [this] { return !detect_classIds.empty(); });`
+        
+        line 82 : `std::lock_guard<std::mutex> ulock(_mutex);`
+
+    6.4 A condition variable is used in the project.
+    * MessageQueue.h line 63: `std::condition_variable _cond;`
+    * SSDModel.cpp 
+    
+        line 42 : `void SSDModel::getNextDetection() {... _cond.wait(ulock, [this] { return !detect_classIds.empty(); }); ...}`
+        
+        line 87 : `void SSDModel::objectDetection(){... _cond.notify_one();...}`

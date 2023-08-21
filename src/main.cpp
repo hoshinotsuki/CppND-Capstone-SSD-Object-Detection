@@ -28,7 +28,6 @@
 int main(int argc, char** argv)
 {
     // Get command line options.
-
     const cv::String keys = 
         "{help h usage ? |      | print this message. }"
         "{c conf         |   .5 | Confidence threshold. }"
@@ -81,7 +80,6 @@ int main(int argc, char** argv)
     // Launch the readinig thread and the detecting thread
     input.thread_for_read();
     ssd_model.thread_for_detection();
-
 
     std::vector<int> classIds;
     std::vector<std::string> classNames;
