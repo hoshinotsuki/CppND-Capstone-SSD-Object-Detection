@@ -5,7 +5,6 @@
 
 #include "MessageQueue.h"
 
-
 class SSDModel
 {
   public:
