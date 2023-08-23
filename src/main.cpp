@@ -65,10 +65,10 @@ int main(int argc, char** argv)
     std::shared_ptr<MessageQueue<cv::Mat>> detection_queue(new MessageQueue<cv::Mat>);
 
     // Create SSD MobileNet model
-    SSDModel ssd_model = SSDModel(conf_threshold, nms_threshold);
+    SSDModel ssd_model(conf_threshold, nms_threshold);
 
     // Create Graphic model which handles images 
-    Graphic input = Graphic(img_file, ssd_model.getClassSize());
+    Graphic input(img_file, ssd_model.getClassSize());
 
     // Set shared pointers of queues into objects
     input.setImageQueue(image_queue);
