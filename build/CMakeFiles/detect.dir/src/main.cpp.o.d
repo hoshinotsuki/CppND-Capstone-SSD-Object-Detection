@@ -1,5 +1,5 @@
 CMakeFiles/detect.dir/src/main.cpp.o: \
-  /Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/src/main.cpp \
+  /Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/src/main.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \
@@ -800,9 +800,9 @@ CMakeFiles/detect.dir/src/main.cpp.o: \
   /opt/homebrew/Cellar/opencv/4.8.0_1/include/opencv4/opencv2/imgcodecs.hpp \
   /opt/homebrew/Cellar/opencv/4.8.0_1/include/opencv4/opencv2/videoio.hpp \
   /opt/homebrew/Cellar/opencv/4.8.0_1/include/opencv4/opencv2/core/utils/filesystem.hpp \
-  /Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/src/SSDModel.h \
+  /Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/src/SSDModel.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque \
-  /Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/src/MessageQueue.h \
+  /Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/src/MessageQueue.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/condition_variable \
-  /Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/src/Graphic.h
+  /Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/src/Graphic.h

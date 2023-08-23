@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/src/Graphic.cpp" "CMakeFiles/detect.dir/src/Graphic.cpp.o" "gcc" "CMakeFiles/detect.dir/src/Graphic.cpp.o.d"
-  "/Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/src/SSDModel.cpp" "CMakeFiles/detect.dir/src/SSDModel.cpp.o" "gcc" "CMakeFiles/detect.dir/src/SSDModel.cpp.o.d"
-  "/Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/src/main.cpp" "CMakeFiles/detect.dir/src/main.cpp.o" "gcc" "CMakeFiles/detect.dir/src/main.cpp.o.d"
+  "/Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/src/Graphic.cpp" "CMakeFiles/detect.dir/src/Graphic.cpp.o" "gcc" "CMakeFiles/detect.dir/src/Graphic.cpp.o.d"
+  "/Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/src/SSDModel.cpp" "CMakeFiles/detect.dir/src/SSDModel.cpp.o" "gcc" "CMakeFiles/detect.dir/src/SSDModel.cpp.o.d"
+  "/Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/src/main.cpp" "CMakeFiles/detect.dir/src/main.cpp.o" "gcc" "CMakeFiles/detect.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

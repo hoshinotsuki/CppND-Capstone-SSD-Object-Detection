@@ -1,4 +1,4 @@
-# Install script for directory: /Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection
+# Install script for directory: /Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

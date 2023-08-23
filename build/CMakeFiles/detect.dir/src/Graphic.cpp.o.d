@@ -1,5 +1,5 @@
 CMakeFiles/detect.dir/src/Graphic.cpp.o: \
-  /Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/src/Graphic.cpp \
+  /Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/src/Graphic.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iomanip \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \
@@ -819,8 +819,8 @@ CMakeFiles/detect.dir/src/Graphic.cpp.o: \
   /opt/homebrew/Cellar/opencv/4.8.0_1/include/opencv4/opencv2/videoio.hpp \
   /opt/homebrew/Cellar/opencv/4.8.0_1/include/opencv4/opencv2/imgproc.hpp \
   /opt/homebrew/Cellar/opencv/4.8.0_1/include/opencv4/opencv2/./imgproc/segmentation.hpp \
-  /Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/src/Graphic.h \
-  /Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/src/SSDModel.h \
+  /Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/src/Graphic.h \
+  /Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/src/SSDModel.h \
   /opt/homebrew/Cellar/opencv/4.8.0_1/include/opencv4/opencv2/dnn.hpp \
   /opt/homebrew/Cellar/opencv/4.8.0_1/include/opencv4/opencv2/dnn/dnn.hpp \
   /opt/homebrew/Cellar/opencv/4.8.0_1/include/opencv4/opencv2/core/async.hpp \
@@ -834,5 +834,5 @@ CMakeFiles/detect.dir/src/Graphic.cpp.o: \
   /opt/homebrew/Cellar/opencv/4.8.0_1/include/opencv4/opencv2/dnn/utils/../dnn.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque \
-  /Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/src/MessageQueue.h \
+  /Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/src/MessageQueue.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/condition_variable

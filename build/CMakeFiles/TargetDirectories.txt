@@ -1,3 +1,3 @@
-/Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/build/CMakeFiles/detect.dir
-/Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/build/CMakeFiles/edit_cache.dir
-/Users/lunayang/ndcpp/5_Final/CppND-Capstone-SSD-Object-Detection/build/CMakeFiles/rebuild_cache.dir
+/Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/build/CMakeFiles/detect.dir
+/Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/build/CMakeFiles/edit_cache.dir
+/Users/lunayang/ndcpp/5_Final/final/CppND-Capstone-SSD-Object-Detection/build/CMakeFiles/rebuild_cache.dir

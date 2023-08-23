@@ -1,21 +1,21 @@
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <mutex>
 #include <condition_variable>
+#include <fstream>
+#include <iostream>
+#include <mutex>
+#include <string>
 #include <thread>
 
 #include <opencv2/dnn.hpp>
 #include <opencv2/core/utils/filesystem.hpp>
 
+
 #include "MessageQueue.h"
 #include "SSDModel.h"
-
 
 // Set input thresholds, read class list file and load the SSD MobileNet model
 // SSDModel::SSDModel(float _conf_threshold=0.5, float _nms_threshold=0.5) :
 
-SSDModel::SSDModel(float _conf_threshold , float _nms_threshold )
+SSDModel::SSDModel(float _conf_threshold, float _nms_threshold)
     : conf_threshold(_conf_threshold), nms_threshold(_nms_threshold) {
   readClassFile();
   loadModel();
@@ -24,7 +24,7 @@ SSDModel::SSDModel(float _conf_threshold , float _nms_threshold )
 SSDModel::~SSDModel() { detection_thread.join(); }
 
 void SSDModel::thread_for_detection() {
-  detection_thread = std::thread(&SSDModel::objectDetection, this);
+  detection_thread = std::thread([this] { this->objectDetection(); });
 }
 
 void SSDModel::setDetectionQueue(
