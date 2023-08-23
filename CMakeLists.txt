@@ -9,8 +9,8 @@ project(SSD_objectdetection)
 # adds the `-pthread` flag to the compiler flags. 
 set(CMAKE_CXX_FLAGS "-pthread")
 
-# config OpenCV 4.2 package
-find_package(OpenCV 4.2 REQUIRED)
+# config OpenCV 4.1 package
+find_package(OpenCV 4.1 REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 link_directories(${OpenCV_LIBRARY_DIRS})
 add_definitions(${OpenCV_DEFINITIONS})
