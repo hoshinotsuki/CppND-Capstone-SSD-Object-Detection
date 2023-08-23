@@ -8,7 +8,6 @@
 #include <opencv2/dnn.hpp>
 #include <opencv2/core/utils/filesystem.hpp>
 
-
 #include "MessageQueue.h"
 #include "SSDModel.h"
 
@@ -20,6 +19,8 @@ SSDModel::SSDModel(float _conf_threshold, float _nms_threshold)
   readClassFile();
   loadModel();
 }
+
+
 
 SSDModel::~SSDModel() { detection_thread.join(); }
 
