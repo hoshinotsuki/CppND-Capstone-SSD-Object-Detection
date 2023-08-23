@@ -15,7 +15,7 @@
 // Set input thresholds, read class list file and load the SSD MobileNet model
 // SSDModel::SSDModel(float _conf_threshold=0.5, float _nms_threshold=0.5) :
 
-SSDModel::SSDModel(float _conf_threshold, float _nms_threshold)
+SSDModel::SSDModel(float _conf_threshold , float _nms_threshold )
     : conf_threshold(_conf_threshold), nms_threshold(_nms_threshold) {
   readClassFile();
   loadModel();

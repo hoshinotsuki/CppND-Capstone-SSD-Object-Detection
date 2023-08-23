@@ -8,7 +8,7 @@
 class SSDModel
 {
   public:
-    SSDModel(float _conf_threshold, float _nms_threshold);
+    SSDModel(float _conf_threshold , float _nms_threshold);
     ~SSDModel();
 
     int getClassSize();
@@ -21,8 +21,8 @@ class SSDModel
 
   private:
     // Detection threshold
-    float conf_threshold;
-    float nms_threshold;
+    float conf_threshold = 0.5;
+    float nms_threshold = 0.5;
 
     // SSD MobileNet Model files 
     const std::string class_file = "../models/object_detection_classes_coco.txt";
