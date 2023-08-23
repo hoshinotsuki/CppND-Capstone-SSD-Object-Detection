@@ -7,13 +7,15 @@
 // image to be detected (input)
 class Graphic {
 public:
-  Graphic(std::string img_file, int class_num);
+  Graphic(std::string img_file, int class_num); 
+  ~Graphic();
+  
   // Delete the copy constructor
   Graphic(const Graphic &) = delete;
-
+  
   // Delete the copy assignment operator
   Graphic &operator=(const Graphic &) = delete;
-  ~Graphic();
+
   void drawResult(cv::Mat &image, const std::vector<int> &classIds,
                   const std::vector<std::string> &classNames,
                   const std::vector<float> &confidences,

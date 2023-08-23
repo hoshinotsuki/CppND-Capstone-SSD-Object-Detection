@@ -223,6 +223,18 @@ In `build` directory, run the executable like below:
     * Graphic.cpp line 34 : `Graphic::~Graphic() { read_thread.join(); }`
     * SSDModel.cpp line 23 : `SSDModel::~SSDModel() { detection_thread.join(); }` 
  
+    5.4 The project follows the Rule of 5
+    * SSDModel.h
+
+        line 14 : `SSDModel(const SSDModel &) = delete;`
+ 
+        line 17 : ` SSDModel &operator=(const SSDModel &) = delete;`
+    * Graphic.h
+
+        line 14 : `Graphic(const Graphic &) = delete;`
+        
+        line 17 :`  Graphic &operator=(const Graphic &) = delete;`
+
     5.5 The project uses move semantics to move data, instead of copying it, where possible.
     * Graphic.cpp 
 

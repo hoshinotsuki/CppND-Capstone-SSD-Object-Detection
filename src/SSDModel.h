@@ -8,13 +8,14 @@
 class SSDModel {
 public:
   SSDModel(float _conf_threshold, float _nms_threshold);
+  ~SSDModel();
+  
   // Delete the copy constructor
   SSDModel(const SSDModel &) = delete;
 
   // Delete the copy assignment operator
   SSDModel &operator=(const SSDModel &) = delete;
-  ~SSDModel();
-
+  
   int getClassSize();
   void thread_for_detection();
   void setDetectionQueue(std::shared_ptr<MessageQueue<cv::Mat>> _detect_queue);
