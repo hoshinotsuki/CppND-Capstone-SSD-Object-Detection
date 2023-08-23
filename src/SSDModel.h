@@ -9,7 +9,7 @@ class SSDModel {
 public:
   SSDModel(float _conf_threshold, float _nms_threshold);
   // Delete the copy constructor
-  SSDModel(const SSDModel &) = delete;
+  //SSDModel(const SSDModel &) = delete;
 
   // Delete the copy assignment operator
   SSDModel &operator=(const SSDModel &) = delete;

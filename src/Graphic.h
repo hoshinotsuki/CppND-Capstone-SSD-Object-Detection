@@ -9,7 +9,7 @@ class Graphic {
 public:
   Graphic(std::string img_file, int class_num);
   // Delete the copy constructor
-  Graphic(const Graphic &) = delete;
+  //Graphic(const Graphic &) = delete;
 
   // Delete the copy assignment operator
   Graphic &operator=(const Graphic &) = delete;
